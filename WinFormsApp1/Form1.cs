@@ -7,12 +7,14 @@ namespace WinFormsApp1
         Line line;
         Ellipse ellipse;
         Triangle triangle;
+        RectangleDraw rectangle;
         public Form1()
         {
             InitializeComponent();
             line = new Line(panel1.CreateGraphics());
             ellipse = new Ellipse(panel1.CreateGraphics());
             triangle = new Triangle(panel1.CreateGraphics());   
+            rectangle = new RectangleDraw(panel1.CreateGraphics());
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,6 +33,12 @@ namespace WinFormsApp1
         {
             triangle.SetColorAndWidth("green", 8);
             triangle.Draw();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            rectangle.SetColorAndWidth("sdd", 9);
+            rectangle.Draw();   
         }
     }
 }
